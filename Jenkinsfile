@@ -12,7 +12,7 @@ pipeline {
         }
         stage("test") {
             when{
-                exepression {
+                expression {
                     params.executeTests
                 }
             }
