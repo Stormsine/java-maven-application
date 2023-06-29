@@ -16,22 +16,26 @@ pipeline {
                     BRANCH_NAME == 'master'
                 }
             }
+            branch{
             steps {
                 script {
                     echo "building the application..."
                     }
                 }
             }
+        }
         stage('deploy') {
             when {
                 expression{
                     BRANCH_NAME == 'master'
                 }
+                branch{
             steps {
                 script {
                     echo "deploying the application..."
                     }
                 }
+            }
             }
 
     }
