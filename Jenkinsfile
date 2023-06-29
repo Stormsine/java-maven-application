@@ -1,4 +1,4 @@
-$BRANCH_NAME == branch
+BRANCH_NAME == branch
 pipeline {
     agent none
     stages {
@@ -13,7 +13,7 @@ pipeline {
         stage('build') {
             when {
                 expression{
-                    $BRANCH_NAME == 'master'
+                    BRANCH_NAME == 'master'
                 }
             }
             steps {
@@ -25,7 +25,7 @@ pipeline {
         stage('deploy') {
             when {
                 expression{
-                    $BRANCH_NAME == 'master'
+                    BRANCH_NAME == 'master'
                 }
             steps {
                 script {
