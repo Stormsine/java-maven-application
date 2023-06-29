@@ -1,8 +1,8 @@
-BRANCH_NAME == branch
+def branch == $BRANCH_NAME
 pipeline {
     agent none
-    branch{
     stages {
+        branch{
         stage('test') {
             steps {
                 script {
