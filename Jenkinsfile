@@ -1,6 +1,7 @@
 BRANCH_NAME == branch
 pipeline {
     agent none
+    branch{
     stages {
         stage('test') {
             steps {
@@ -16,28 +17,29 @@ pipeline {
                     BRANCH_NAME == 'master'
                 }
             }
-            branch{
+            
             steps {
                 script {
                     echo "building the application..."
                     }
                 }
-            }
+            
         }
         stage('deploy') {
             when {
                 expression{
                     BRANCH_NAME == 'master'
                 }
-                branch{
+                
             steps {
                 script {
                     echo "deploying the application..."
                     }
                 }
-            }
+            
             }
 
     }
  }
+    }
 }
