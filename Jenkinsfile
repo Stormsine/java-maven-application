@@ -2,7 +2,6 @@ def branch
 pipeline {
     agent none
     stages {
-        branch{
         stage('test') {
             steps {
                 script {
@@ -40,6 +39,6 @@ pipeline {
             }
 
     }
- }
+ 
     }
 }
