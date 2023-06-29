@@ -1,4 +1,4 @@
-def branch == $BRANCH_NAME
+def branch
 pipeline {
     agent none
     stages {
