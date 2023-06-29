@@ -1,3 +1,4 @@
+$BRANCH_NAME == branch
 pipeline {
     agent none
     stages {
